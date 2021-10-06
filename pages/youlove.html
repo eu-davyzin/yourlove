@@ -23,32 +23,54 @@
         <img src="https://www.imagensanimadas.com/data/media/373/coracao-imagem-animada-0845.gif" border="0" alt="coracao-imagem-animada-0845" />
     </div>
 
-    <br>
+    <br><br><br>
 
     <div id="div">
-
-        <!--JS funciona aqui-->
-        <script>
-            /*Programa Principal*/
-            var txt = `<p>${geraStringAleatoria(1)}</p>`
-            var div = document.querySelector("#div")
-            setTimeout(inicial, 5900)
-            function inicial(){
-                div.innerHTML = txt
-            }
-            
-
-            function geraStringAleatoria(tamanho) {
-            var stringAleatoria = '';
-            var caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-            for (var i = 0; i < tamanho; i++) {
-                stringAleatoria += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
-            }
-            return stringAleatoria;
-            }
-        </script>
-
+        <!--IMAGEM AQUI-->
     </div>
+
+    <!--JS funciona aqui-->
+    <script>
+
+        var letras = [
+            '<img src="../letras/a.png" class="grow">',
+            '<img src="../letras/b.png" class="grow">',
+            '<img src="../letras/c.png" class="grow">',
+            '<img src="../letras/d.png" class="grow">',
+            '<img src="../letras/e.png" class="grow">',
+            '<img src="../letras/f.png" class="grow">',
+            '<img src="../letras/g.png" class="grow">',
+            '<img src="../letras/h.png" class="grow">',
+            '<img src="../letras/i.png" class="grow">',
+            '<img src="../letras/j.png" class="grow">',
+            '<img src="../letras/k.png" class="grow">',
+            '<img src="../letras/l.png" class="grow">',
+            '<img src="../letras/m.png" class="grow">',
+            '<img src="../letras/n.png" class="grow">',
+            '<img src="../letras/o.png" class="grow">',
+            '<img src="../letras/p.png" class="grow">',
+            '<img src="../letras/q.png" class="grow">',
+            '<img src="../letras/r.png" class="grow">',
+            '<img src="../letras/s.png" class="grow">',
+            '<img src="../letras/t.png" class="grow">',
+            '<img src="../letras/u.png" class="grow">',
+            '<img src="../letras/v.png" class="grow">',
+            '<img src="../letras/w.png" class="grow">',
+            '<img src="../letras/x.png" class="grow">',
+            '<img src="../letras/y.png" class="grow">',
+            '<img src="../letras/z.png" class="grow">'
+        ]
+
+        /*Programa Principal*/
+        var num = Math.floor(Math.random() * letras.length)
+        var txt = letras[num]
+        var div = document.querySelector("#div")
+        setTimeout(inicial, 5900)
+        function inicial(){
+            div.innerHTML = `${txt} <p>Eai? Já tem uma noção de quem seja?</p>`
+        }
+        
+    </script>
 
 </body>
 </html>
